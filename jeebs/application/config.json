@@ -1,5 +1,5 @@
 {
-    "$id": "https://schemas.bfren.dev/json/application/config.json",
+    "$id": "https://schemas.bfren.dev/jeebs/application/config.json",
     "$schema": "http://json-schema.org/draft-07/schema",
     "title": "Jeebs Libraries Configuration Settings",
     "type": "object",
