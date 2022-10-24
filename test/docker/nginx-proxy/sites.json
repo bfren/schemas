@@ -1,0 +1,14 @@
+{
+    "$schema": "../../../docker/nginx-proxy/domains.json",
+    "domains": [
+        {
+            "primary": "example.com",
+            "aliases": [
+                "www.example.com",
+                "ww2.example.com"
+            ],
+            "custom": true,
+            "upstream": "http://example"
+        }
+    ]
+}

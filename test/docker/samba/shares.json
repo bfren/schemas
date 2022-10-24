@@ -1,0 +1,29 @@
+{
+    "$schema": "../../../docker/samba/shares.json",
+    "users": [
+        {
+            "name": "foo",
+            "pass": "bar"
+        },
+        {
+            "name": "bar",
+            "pass": "foo"
+        }
+    ],
+    "shares": [
+        {
+            "name": "example",
+            "users": [
+                "foo",
+                "bar"
+            ],
+            "writeable": false
+        },
+        {
+            "name": "public",
+            "users": [
+                "*"
+            ]
+        }
+    ]
+}

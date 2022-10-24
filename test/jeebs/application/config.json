@@ -1,0 +1,28 @@
+{
+    "$schema": "../../../jeebs/application/config.json",
+    "jeebs": {
+        "app": {
+            "name": "Test"
+        },
+        "db": {
+            "default": "mariadb",
+            "connections": {
+                "mariadb":{
+                    "connectionString": "mariadb://user:password@host/dbname"
+                }
+            }
+        },
+        "logging": {
+            "minimum": "Debug",
+            "overrides": {
+                "Microsoft": "Warning"
+            },
+            "providers": {
+                "console": {
+                    "enabled": true,
+                    "minimum": "Verbose"
+                }
+            }
+        }
+    }
+}
