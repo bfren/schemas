@@ -1,5 +1,5 @@
 {
-    "$id": "https://schemas.bfren.dev/docker/nginx-proxy/2022-05.json",
+    "$id": "https://schemas.bfren.dev/docker/nginx-proxy/domains/2022-05.json",
     "$schema": "https://json-schema.org/draft-07/schema",
     "description": "Docker Nginx Proxy Configuration Settings",
     "type": "object",
