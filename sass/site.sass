@@ -1,0 +1,39 @@
+@use "../sassy/src" as sassy
+
+body
+    @extend %bf-body
+    @extend %bf-p-4
+    background-color: #{sassy.colour("slate", 50)}
+    margin: 0
+
+main
+    @extend %bf-mx-auto
+    max-width: 40rem
+
+h1
+    @extend %bf-font-weight-700
+    @extend %bf-mb-5
+
+section
+    @extend %bf-p-4
+    @extend %bf-mb-4
+    @extend %bf-rounded
+    @extend %bf-shadow-1
+    background-color: #fff
+
+    h2
+        @extend %bf-mt-0
+        @extend %bf-mb-3
+        @extend %bf-font-size-4
+
+    ul
+        @extend %bf-m-0
+        @extend %bf-p-0
+        list-style: none
+
+    li
+        @extend %bf-py-1
+
+a
+    @extend %bf-c-primary
+    @extend %bf-font-family-mono
