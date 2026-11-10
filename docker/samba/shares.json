@@ -1,6 +1,6 @@
 {
     "$id": "https://schemas.bfren.dev/docker/samba/shares.json",
-    "$schema": "https://json-schema.org/draft-07/schema",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "Docker Samba Configuration Settings",
     "type": "object",
     "required": [
@@ -63,11 +63,11 @@
                 },
                 "browseable": {
                     "type": "boolean",
-                    "description": "Whether or not the share should be browseable (default: true)."
+                    "description": "Whether or not the share should be browseable (default: true) - public shares are always browseable."
                 },
                 "writeable": {
                     "type": "boolean",
-                    "description": "Whether or not the share should be writeable (default: true)."
+                    "description": "Whether or not the share should be writeable (default: true) - public shares are always writeable."
                 }
             }
         }
