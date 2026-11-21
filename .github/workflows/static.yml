@@ -21,11 +21,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # Separate jobs so deploy only starts once the artifact is registered,
+  # and "Re-run failed jobs" re-runs deploy without uploading a duplicate artifact
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,6 +35,14 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
